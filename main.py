@@ -28,6 +28,8 @@ def make_report(counts):
     print(f"The '{l['name']}' character was found {l['count']} times")
 
 def main(path):
+  word_count = len(get_text(path).split())
+  print(f"{word_count} words found in the document")
   d = count_chars(path)
   make_report(d)
 
