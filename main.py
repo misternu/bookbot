@@ -22,11 +22,12 @@ def print_report(path, num_words, sorted_dict):
     print("============= END ===============")
 
 def main():
-  path = 'books/frankenstein.txt'
-  text = get_text(path)
-  num_words = get_num_words(text)
-  chars_dict = get_chars_dict(text)
-  sorted_dict = chars_dict_to_sorted_list(chars_dict)
-  print_report(path, num_words, sorted_dict)
+    print(sys.argv)
+    path = sys.argv[1]
+    text = get_text(path)
+    num_words = get_num_words(text)
+    chars_dict = get_chars_dict(text)
+    sorted_dict = chars_dict_to_sorted_list(chars_dict)
+    print_report(path, num_words, sorted_dict)
 
 main()
